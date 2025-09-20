@@ -4,8 +4,8 @@ This project analyzes the behavior of Ethernet switches and the operation of the
 It explores frame filtering, ARP exchanges, MAC learning, and loop prevention in redundant switch topologies.
 
 ## Project Structure
-- `Bridging_and_spanning_tree_protocol.pdf` → Full detailed lab report (LaTeX formatted with figures)
-- `Bridging_and_spanning_tree_protocol.md` → Markdown version of the report for quick reading on GitHub
+- `Bridging_and_spanning_tree_protocol.pdf` → Full detailed lab report
+- `Bridging_and_spanning_tree_protocol.md` → Markdown version of the report
 
 ## Tools
 - Wireshark
