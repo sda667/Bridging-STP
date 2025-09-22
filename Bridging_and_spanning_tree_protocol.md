@@ -16,7 +16,6 @@ Finally, similarities and differences between STP and RIP are discussed.
 - Additional experiments with four interconnected bridges (bridge1–bridge4) with redundant links to study STP behavior.  
 - **Wireshark** captures used to analyze ARP and BPDU traffic.  
 
-(Figure: Network topology not included here.)
 
 ---
 
@@ -26,9 +25,14 @@ Finally, similarities and differences between STP and RIP are discussed.
 - First RTT between pc2 → pc3 significantly longer (11 ms vs 0.5 ms on average).  
 - Delay caused by ARP resolution: pc2 broadcasts an ARP request before sending the first ICMP Echo Request.  
 - Once cached, subsequent pings are immediate with lower RTT.  
+<img width="1372" height="557" alt="ARP_request_pc2" src="https://github.com/user-attachments/assets/9a270a93-9ea7-452c-9848-8b6f98637b6c" />
 
-(Figure: ARP request broadcast from pc2)  
-(Figure: ARP reply from pc3)  
+**Figure: ARP request broadcast from pc2** 
+
+<img width="1294" height="293" alt="ARP_reply_pc3" src="https://github.com/user-attachments/assets/a4f828c9-6812-4c78-9093-36f499f7299d" />
+
+**Figure: ARP reply from pc3**
+
 
 ---
 
@@ -47,7 +51,7 @@ This builds forwarding tables for efficient frame delivery.
 
 ---
 
-### Switch Transparency and TTL
+### Switch Tranp`arency and TTL
 - Switches operate at Layer 2 and do not modify IP headers.  
 - TTL remains unchanged when passing through switches.  
 - Only routers decrement TTL.  
@@ -71,8 +75,9 @@ This builds forwarding tables for efficient frame delivery.
 
 On each link, STP designates one forwarding port.  
 Root bridge ports are always designated. Some redundant ports are blocked to prevent loops.  
+<img width="500" height="436" alt="STP_topology" src="https://github.com/user-attachments/assets/af70c283-365d-4dd6-bdb3-036eed977105" />
 
-(Figure: STP topology with root and designated ports)  
+**Figure: STP topology with root and designated ports**
 
 ---
 
